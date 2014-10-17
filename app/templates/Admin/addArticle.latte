@@ -1,0 +1,12 @@
+{block content}
+<div id="content">
+    {if $user->isLoggedIn()}
+        <h2 n:block=title>Create new article</h2>
+
+        {control newArticleForm}
+    {else}
+        <h2>Pre vstup do tejto sekcie, sa prosím  <a class ="rounded" n:href="Sign:in">prihláste</a></h2>
+    {/if}
+</div>
+
+{* or use {include '../components/form.latte', form => signInForm} *}

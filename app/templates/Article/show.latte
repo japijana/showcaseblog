@@ -1,0 +1,15 @@
+{block content}
+<div id="content">
+    {if $article}
+        <h2>{$article->getTitle()}</h2>
+            <p>{$article->getContent()}</p>
+            <a class ="rounded" href="{link Homepage:default}" >späť</a>
+    {else}
+        <h2>Článok neexistuje</h2>
+    {/if}
+</div>
+{/block}
+
+
+
+

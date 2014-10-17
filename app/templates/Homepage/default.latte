@@ -1,0 +1,27 @@
+{* This is the welcome page, you can delete it *}
+
+{block content}
+<div id="content">
+	{foreach $articles as $article}
+        <h2 title="{$article->getTitle()}">{$article->getTitle()|truncate:55}</h2>
+        	<p>{$article->getContent()|truncate:165} <a class="rounded" href="{link Article:show $article->getId()}" > viac</a></p>
+	{/foreach}
+</div>
+{/block}
+
+{block scripts}
+{include parent}
+<script src="http://jush.sourceforge.net/jush.js"></script>
+<script>
+	jush.create_links = true;
+	jush.highlight_tag('code');
+	$('code.jush').each(function(){ $(this).html($(this).html().replace(/\x7B[/$\w].*?\}/g, '<span class="jush-latte">$&</span>')) });
+
+	$('a[href^=#]').click(function(){
+		$('html,body').animate({ scrollTop: $($(this).attr('href')).show().offset().top - 5 }, 'fast');
+		return false;
+	});
+</script>
+{/block}
+
+
