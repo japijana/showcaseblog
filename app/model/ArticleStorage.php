@@ -29,8 +29,9 @@ class ArticleStorage implements ArticleStorageInterface
     public function findAll($limit = NULL, $offset = NULL)
     {
         $arr = [];
-        $data = $this->database->table("articles")->order("id DESC")->limit($limit,$offset)->fetchAll();
-        foreach ($data as $article) {
+        $dataFetchAll = $this->database->table("articles")->order("id DESC")->limit($limit, $offset)->fetchAll();
+
+        foreach ($dataFetchAll as $article) {
             $arr[] = $this->mapObject($article);
         }
         return $arr;

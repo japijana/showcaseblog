@@ -34,7 +34,7 @@ class AdminPresenter extends Nette\Application\UI\Presenter
     public function newArticleFormSucceeded($form, $values)
     {
         try {
-            $this->articleRepository->save(array("title" => $values->article_content, "content" => $values->article_title), $this->user->id);
+            $this->articleRepository->save(array("title" => $values->article_title, "content" => $values->article_content), $this->user->id);
             $message = "Článok bol úspešne pridaný";
             $type = "INFO";
         } catch (\Exception $e) {

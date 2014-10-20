@@ -18,7 +18,7 @@ class ArticlePresenter extends BasePresenter
     private $article;
 
     /** @var Model\ArticleRepository */
-    public $articleRepository;
+    private $articleRepository;
 
     public function injectArticleRepository(Model\ArticleRepository $service)
     {

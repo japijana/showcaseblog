@@ -44,7 +44,8 @@ class ArticleRepository
      */
     public function save($article, $author)
     {
-        $datum = DateTime::from('now');
+        $datum = new DateTime();
+        dump($datum);
         $article = new Article(NULL, $article['title'], $article['content'], $datum, $author);
         try {
             return $this->articleStorage->save($article);

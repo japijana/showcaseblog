@@ -2,7 +2,9 @@
 <div id="content">
     {if $article}
         <h2>{$article->getTitle()}</h2>
-            <p>{$article->getContent()}</p>
+            <div id="pure_content">
+                {$article->getContent()|noescape}
+            </div>
             <a class ="rounded" href="{link Homepage:default}" >späť</a>
     {else}
         <h2>Článok neexistuje</h2>

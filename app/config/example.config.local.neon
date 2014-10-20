@@ -1,0 +1,9 @@
+parameters:
+
+# Please create your own database and rewrite these parameters below
+database:
+	dsn: 'mysql:host=127.0.0.1;dbname=showcase'
+	user: 'casatest'
+	password: 'casaport123XK'
+	options:
+		lazy: yes
