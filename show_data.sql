@@ -6,7 +6,7 @@ CREATE TABLE `users` (
 	PRIMARY KEY (`id`),
 	UNIQUE INDEX `username` (`username`)
 )
-COLLATE='latin2_general_ci'
+COLLATE='utf8_unicode_ci'
 ENGINE=InnoDB
 AUTO_INCREMENT=2;
 
@@ -22,7 +22,7 @@ CREATE TABLE `articles` (
 	INDEX `fk_author_id` (`author_id`),
 	CONSTRAINT `fk_author_id` FOREIGN KEY (`author_id`) REFERENCES `users` (`id`) ON UPDATE NO ACTION ON DELETE NO ACTION
 )
-COLLATE='latin2_general_ci'
+COLLATE='utf8_unicode_ci'
 ENGINE=InnoDB
 AUTO_INCREMENT=37;
 
