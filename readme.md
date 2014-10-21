@@ -33,3 +33,12 @@ License
 - jQuery: MIT License (https://jquery.org/license)
 - Adminer: Apache License 2.0 or GPL 2 (http://www.adminer.org)
 - Sandbox: The Unlicense (http://unlicense.org)
+
+Notes for this project
+----------------------
+- Donwload project
+- Rename config.local.example.neon to config.local.neon.
+- Create empty database and change config.local.neon.
+- Use show_data.sql for initialisation your database.
+- Login to app as an admin with user name: jano , password:jano123
+- You can change/add new login option by uncommenting line 40 in file app/model/UserManager and providing new data
